@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "338593255556",
+    "project_id": "appmundial-c5810",
+    "storage_bucket": "appmundial-c5810.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338593255556:android:9b4cdb806bdd59271432d1",
+        "android_client_info": {
+          "package_name": "com.albummundial.album_mundial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "338593255556-5o5po6mgg3u94jrr50id8l8e6l81rllj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.albummundial.album_mundial",
+            "certificate_hash": "ae880431e26b726b1735dfe71c71549f4fc3606f"
+          }
+        },
+        {
+          "client_id": "338593255556-j814d7p4m7m3mtlohd5pknr5kjt0vi1j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6-xP_SA1vpfqLROBmGmkxLychPJoxN_A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "338593255556-j814d7p4m7m3mtlohd5pknr5kjt0vi1j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "338593255556-qrnvcjqa77sreie1hogbtu43selr7e9s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.albummundial.albumMundial"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338593255556:android:aeffe97f3893604f1432d1",
+        "android_client_info": {
+          "package_name": "com.appmundial.F2026"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "338593255556-kplla9ohl2i56ak78cpk2b1q58pbq07h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.appmundial.F2026",
+            "certificate_hash": "ae880431e26b726b1735dfe71c71549f4fc3606f"
+          }
+        },
+        {
+          "client_id": "338593255556-j814d7p4m7m3mtlohd5pknr5kjt0vi1j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6-xP_SA1vpfqLROBmGmkxLychPJoxN_A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "338593255556-j814d7p4m7m3mtlohd5pknr5kjt0vi1j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "338593255556-qrnvcjqa77sreie1hogbtu43selr7e9s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.albummundial.albumMundial"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
