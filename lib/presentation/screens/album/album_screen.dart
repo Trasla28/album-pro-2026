@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import '../../../core/constants/app_constants.dart';
 import '../../../core/enums/album_enums.dart';
 import '../../../core/theme/app_colors.dart';
@@ -50,6 +51,13 @@ class _AlbumScreenState extends ConsumerState<AlbumScreen> {
     final state = ref.watch(albumProvider);
 
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => context.push('/home/scan'),
+        backgroundColor: AppColors.primary,
+        foregroundColor: AppColors.white,
+        tooltip: 'Escanear láminas',
+        child: const Icon(Icons.document_scanner_outlined),
+      ),
       body: CustomScrollView(
         slivers: [
           _buildAppBar(context, state),

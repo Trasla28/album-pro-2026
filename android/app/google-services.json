@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "338593255556-3us4brjeg775qlr3u5412f5rsp9iunr7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.albummundial.album_mundial",
+            "certificate_hash": "e088f121667f3671d5bd4606341cfaa58d2b8080"
+          }
+        },
+        {
           "client_id": "338593255556-5o5po6mgg3u94jrr50id8l8e6l81rllj.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

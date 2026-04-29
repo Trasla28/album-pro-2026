@@ -10,6 +10,8 @@ import '../../presentation/screens/home/home_screen.dart';
 import '../../presentation/screens/profile/profile_screen.dart';
 import '../../presentation/screens/notifications/notification_prefs_screen.dart';
 import '../../presentation/screens/achievements/achievements_screen.dart';
+import '../../presentation/screens/album/scan_screen.dart';
+import '../../presentation/screens/album/scan_confirm_screen.dart';
 
 // Signals when the splash animation has finished — prevents navigating away
 // from splash before the 1.8s animation completes even if auth resolves faster.
@@ -37,6 +39,14 @@ final routerProvider = Provider<GoRouter>((ref) {
           GoRoute(
               path: 'achievements',
               builder: (_, __) => const AchievementsScreen()),
+          GoRoute(
+              path: 'scan',
+              builder: (_, __) => const ScanScreen(),
+              routes: [
+                GoRoute(
+                    path: 'confirm',
+                    builder: (_, __) => const ScanConfirmScreen()),
+              ]),
         ],
       ),
     ],
