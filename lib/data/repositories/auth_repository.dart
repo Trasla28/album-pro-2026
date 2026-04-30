@@ -19,7 +19,10 @@ class AuthRepository {
   // Lazy getters: Firebase only accessed when sign-in is actually attempted,
   // not at construction time (avoids crash when Firebase isn't initialized yet).
   FirebaseAuth get _firebaseAuth => FirebaseAuth.instance;
-  GoogleSignIn get _googleSignIn => GoogleSignIn();
+  GoogleSignIn get _googleSignIn => GoogleSignIn(
+        serverClientId:
+            '338593255556-j814d7p4m7m3mtlohd5pknr5kjt0vi1j.apps.googleusercontent.com',
+      );
 
   String? _accessToken;
   String? _refreshToken;

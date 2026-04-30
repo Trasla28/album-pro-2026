@@ -6,6 +6,19 @@
 -keep class io.flutter.**  { *; }
 -keep class io.flutter.plugins.**  { *; }
 
+# Firebase Auth — required for signInWithProvider (Microsoft/OAuth) and certificate hash
+-keep class com.google.firebase.auth.** { *; }
+-keep class com.google.firebase.** { *; }
+-keepattributes Signature
+-keepattributes *Annotation*
+-keepattributes EnclosingMethod
+-keepattributes InnerClasses
+
+# Google Sign-In / Google Play Services
+-keep class com.google.android.gms.auth.** { *; }
+-keep class com.google.android.gms.common.** { *; }
+-keep class com.google.android.gms.internal.auth.** { *; }
+
 # ML Kit — suppress missing non-Latin script recognizer classes
 # (app only uses Latin script, so these optional modules are not bundled)
 -dontwarn com.google.mlkit.vision.text.chinese.ChineseTextRecognizerOptions$Builder

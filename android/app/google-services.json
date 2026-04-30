@@ -22,6 +22,14 @@
           }
         },
         {
+          "client_id": "338593255556-44vtqee00ofmiukbt55dfb0chjlavurr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.albummundial.album_mundial",
+            "certificate_hash": "8fb87cfdecf654bf4d4fb5d29ba569f1847cd707"
+          }
+        },
+        {
           "client_id": "338593255556-5o5po6mgg3u94jrr50id8l8e6l81rllj.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
