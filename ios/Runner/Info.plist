@@ -41,8 +41,19 @@
 			<string>UIInterfaceOrientationLandscapeLeft</string>
 			<string>UIInterfaceOrientationLandscapeRight</string>
 		</array>
+		<key>NSCameraUsageDescription</key>
+		<string>Necesitamos acceso a tu cámara para escanear figuritas del álbum.</string>
+		<key>NSPhotoLibraryUsageDescription</key>
+		<string>Necesitamos acceso a tu galería para seleccionar fotos de figuritas.</string>
+		<key>NSPhotoLibraryAddOnlyUsageDescription</key>
+		<string>Necesitamos guardar fotos en tu galería.</string>
 		<key>NSUserNotificationsUsageDescription</key>
 		<string>Necesitamos enviarte notificaciones sobre solicitudes de amistad e intercambios de figuritas.</string>
+		<key>UIBackgroundModes</key>
+		<array>
+			<string>remote-notification</string>
+			<string>fetch</string>
+		</array>
 		<key>GADApplicationIdentifier</key>
 		<string>ca-app-pub-2794505381439193~4247432036</string>
 		<key>CADisableMinimumFrameDurationOnPhone</key>
