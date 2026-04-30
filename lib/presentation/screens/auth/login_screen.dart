@@ -75,7 +75,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
 
                   // ── Logo ────────────────────────────────────────────
                   Image.asset(
-                    'assets/images/logo.png',
+                    'assets/images/icon_final_512.png',
                     width: 110,
                     height: 110,
                   ),
