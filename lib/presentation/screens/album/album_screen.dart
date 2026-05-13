@@ -11,6 +11,7 @@ import '../../widgets/sticker_cell.dart';
 import 'album_search_screen.dart';
 import 'calculator_screen.dart';
 import 'sticker_detail_screen.dart';
+import '../swaps/message_swap_screen.dart';
 
 class AlbumScreen extends ConsumerStatefulWidget {
   const AlbumScreen({super.key});
@@ -74,6 +75,13 @@ class _AlbumScreenState extends ConsumerState<AlbumScreen> {
     return SliverAppBar(
       pinned: true,
       title: const Text('AlbumPro 2026'),
+      leading: IconButton(
+        icon: const Icon(Icons.swap_horiz_outlined),
+        tooltip: 'Intercambio por mensaje',
+        onPressed: () => Navigator.of(context).push(
+          MaterialPageRoute(builder: (_) => const MessageSwapScreen()),
+        ),
+      ),
       actions: [
         IconButton(
           icon: const Icon(Icons.calculate_outlined),

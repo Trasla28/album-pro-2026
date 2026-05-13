@@ -11,7 +11,6 @@ import '../../widgets/app_button.dart';
 import '../../widgets/user_avatar.dart';
 import 'add_friend_screen.dart';
 import 'friend_detail_screen.dart';
-import 'message_swap_screen.dart';
 
 class SwapsScreen extends ConsumerWidget {
   const SwapsScreen({super.key});
@@ -27,25 +26,12 @@ class SwapsScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const Text('Amigos'),
-            friendCodeAsync.when(
-              data: (code) => _FriendCodeChip(code: code),
-              loading: () => const SizedBox.shrink(),
-              error: (_, __) => const SizedBox.shrink(),
-            ),
-          ],
-        ),
+        title: const Text('Amigos'),
         actions: [
-          IconButton(
-            onPressed: () => Navigator.of(context).push(
-              MaterialPageRoute(builder: (_) => const MessageSwapScreen()),
-            ),
-            icon: const Icon(Icons.swap_horiz_outlined),
-            tooltip: 'Intercambio por mensaje',
+          friendCodeAsync.when(
+            data: (code) => _FriendCodeChip(code: code),
+            loading: () => const SizedBox.shrink(),
+            error: (_, __) => const SizedBox.shrink(),
           ),
           const SizedBox(width: AppConstants.spacingS),
         ],
