@@ -16,15 +16,15 @@ class MockAlbumData {
 
     // Grupo B
     ('B', 'CAN', 'Canadá'),
-    ('B', 'SUI', 'Suiza'),
-    ('B', 'QAT', 'Catar'),
     ('B', 'BIH', 'Bosnia y Herzegovina'),
+    ('B', 'QAT', 'Catar'),
+    ('B', 'SUI', 'Suiza'),
 
     // Grupo C
     ('C', 'BRA', 'Brasil'),
     ('C', 'MAR', 'Marruecos'),
     ('C', 'HAI', 'Haití'),
-    ('C', 'ESC', 'Escocia'),
+    ('C', 'SCO', 'Escocia'),
 
     // Grupo D
     ('D', 'USA', 'Estados Unidos'),
@@ -34,9 +34,9 @@ class MockAlbumData {
 
     // Grupo E
     ('E', 'GER', 'Alemania'),
-    ('E', 'ECU', 'Ecuador'),
+    ('E', 'CUW', 'Curazao'),
     ('E', 'CIV', 'Costa de Marfil'),
-    ('E', 'CUR', 'Curazao'),
+    ('E', 'ECU', 'Ecuador'),
 
     // Grupo F
     ('F', 'NED', 'Países Bajos'),
@@ -52,27 +52,27 @@ class MockAlbumData {
 
     // Grupo H
     ('H', 'ESP', 'España'),
-    ('H', 'URU', 'Uruguay'),
-    ('H', 'KSA', 'Arabia Saudita'),
     ('H', 'CPV', 'Cabo Verde'),
+    ('H', 'KSA', 'Arabia Saudita'),
+    ('H', 'URU', 'Uruguay'),
 
     // Grupo I
     ('I', 'FRA', 'Francia'),
     ('I', 'SEN', 'Senegal'),
-    ('I', 'NOR', 'Noruega'),
     ('I', 'IRQ', 'Irak'),
+    ('I', 'NOR', 'Noruega'),
 
     // Grupo J
     ('J', 'ARG', 'Argentina'),
-    ('J', 'AUT', 'Austria'),
     ('J', 'ALG', 'Argelia'),
+    ('J', 'AUT', 'Austria'),
     ('J', 'JOR', 'Jordania'),
 
     // Grupo K
     ('K', 'POR', 'Portugal'),
-    ('K', 'COL', 'Colombia'),
-    ('K', 'UZB', 'Uzbekistán'),
     ('K', 'COD', 'RD del Congo'),
+    ('K', 'UZB', 'Uzbekistán'),
+    ('K', 'COL', 'Colombia'),
 
     // Grupo L
     ('L', 'ENG', 'Inglaterra'),
@@ -112,7 +112,6 @@ class MockAlbumData {
       (17, 'FWC', 'FIFA WC 17', 'BMO Field Toronto'),
       (18, 'FWC', 'FIFA WC 18', 'Estadio Azteca'),
       (19, 'FWC', 'FIFA WC 19', 'Estadio BBVA'),
-      (20, 'FWC', 'FIFA WC 20', 'Estadio Akron'),
     ];
     final stickers = introData
         .map(

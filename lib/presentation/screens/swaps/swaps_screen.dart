@@ -11,6 +11,7 @@ import '../../widgets/app_button.dart';
 import '../../widgets/user_avatar.dart';
 import 'add_friend_screen.dart';
 import 'friend_detail_screen.dart';
+import 'message_swap_screen.dart';
 
 class SwapsScreen extends ConsumerWidget {
   const SwapsScreen({super.key});
@@ -26,12 +27,25 @@ class SwapsScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Amigos'),
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Text('Amigos'),
+            friendCodeAsync.when(
+              data: (code) => _FriendCodeChip(code: code),
+              loading: () => const SizedBox.shrink(),
+              error: (_, __) => const SizedBox.shrink(),
+            ),
+          ],
+        ),
         actions: [
-          friendCodeAsync.when(
-            data: (code) => _FriendCodeChip(code: code),
-            loading: () => const SizedBox.shrink(),
-            error: (_, __) => const SizedBox.shrink(),
+          IconButton(
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute(builder: (_) => const MessageSwapScreen()),
+            ),
+            icon: const Icon(Icons.swap_horiz_outlined),
+            tooltip: 'Intercambio por mensaje',
           ),
           const SizedBox(width: AppConstants.spacingS),
         ],
@@ -85,6 +99,15 @@ class _FriendCodeChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final bgColor = isDark
+        ? AppColors.primary.withValues(alpha: 0.18)
+        : AppColors.primary;
+    final fgColor = isDark ? AppColors.primary : AppColors.white;
+    final borderColor = isDark
+        ? AppColors.primary.withValues(alpha: 0.4)
+        : AppColors.primaryDark;
+
     return GestureDetector(
       onTap: () {
         Clipboard.setData(ClipboardData(text: code));
@@ -96,23 +119,23 @@ class _FriendCodeChip extends StatelessWidget {
         );
       },
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
         decoration: BoxDecoration(
-          color: AppColors.primary.withValues(alpha: 0.12),
+          color: bgColor,
           borderRadius: BorderRadius.circular(20),
-          border: Border.all(color: AppColors.primary.withValues(alpha: 0.3)),
+          border: Border.all(color: borderColor),
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Icon(Icons.tag, size: 13, color: AppColors.primary),
-            const SizedBox(width: 4),
+            Icon(Icons.tag, size: 12, color: fgColor),
+            const SizedBox(width: 3),
             Text(
               code,
-              style: const TextStyle(
-                fontSize: 12,
+              style: TextStyle(
+                fontSize: 11,
                 fontWeight: FontWeight.w700,
-                color: AppColors.primary,
+                color: fgColor,
                 letterSpacing: 1,
               ),
             ),
